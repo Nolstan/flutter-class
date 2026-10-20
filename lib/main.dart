@@ -364,11 +364,11 @@ import 'package:flutter_practice/myText.dart';
 // Dave practice exams ;
 
 
-void main(){
-  runApp(MaterialApp(
-    home: Practice(),
-  ));
-}
+// void main(){
+//   runApp(MaterialApp(
+//     home: Practice(),
+//   ));
+// }
 
 // class Practice extends StatelessWidget {
 //   const Practice({super.key});
@@ -736,87 +736,569 @@ void main(){
 
 
 
-class Practice extends StatelessWidget {
-  const Practice({super.key});
+// class Practice extends StatelessWidget {
+//   const Practice({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return DefaultTabController( //when using tabs use DefaultTabController
-      length: 3, //this is required 
-      child: Dashboard(),
-    );
-  }
+//   @override
+//   Widget build(BuildContext context) {
+//     return DefaultTabController( //when using tabs use DefaultTabController
+//       length: 3, //this is required 
+//       child: Dashboard(),
+//     );
+//   }
+// }
+
+
+// class Dashboard extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//    return MaterialApp(
+//     home: Scaffold(
+//          appBar: AppBar(
+//           backgroundColor: Colors.grey,
+//           title: Text("Title Holder",style: TextStyle(color: Colors.white),),
+//           centerTitle: true,
+//          ),
+//           body: Center(
+//             child: Column(
+//               children: [
+//                 MyText(text: "Hello 1"),
+//                 MyText(text: "Hello 2"),
+//                 MyText(text: "Hello 3")
+//               ],
+//             ),
+//           ),
+//           ),
+//    );
+//   }
+// }
+
+
+
+// class MyText extends StatelessWidget {
+//   String text ;
+//   MyText ({super.key, required this.text});
+//   @override
+//   Widget build(BuildContext context) {
+//     return Text(text,style: TextStyle(color: Colors.red),);
+    
+//   }
+// }
+
+
+
+// class BlacButton extends StatelessWidget {
+//   final String text;
+
+//   const BlacButton({super.key, required this.text});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return OutlinedButton(
+//       onPressed: () {
+        
+//       },
+//       child: Text(text),
+//     );
+//   }
+// }
+
+
+
+// class MyButton extends StatefulWidget {
+//   const MyButton({super.key});
+
+//   @override
+//   State<MyButton> createState() => _MyButtonState();
+// }
+
+// class _MyButtonState extends State<MyButton> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return  OutlinedButton(onPressed: (){
+//       print("You pressed me ");
+//     }, child: const Text("Pressed"));
+//   }
+// }
+
+
+
+
+// void main(){
+//   runApp(MaterialApp(
+//     home:Cards(),
+//   ));
+// }
+
+
+// class Cards  extends StatefulWidget {
+//   const Cards ({super.key});
+
+//   @override
+//   State<Cards > createState() => _MyWidgetState();
+// }
+
+// // cards dont hava padding property , u basically need to create a card > use child widget > padding >inside padding add content
+// // cards dont have constraits to specifying the size of card(basically no width / height )
+// // u can add height and width with the help of sizedbox and other widgets lice the container
+// class _MyWidgetState extends State<Cards > {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//          child: Card(
+//           color: Colors.grey[700],
+//           elevation: 16,
+//           shadowColor: Colors.grey[500],
+//           // shape: BorderRadius.all(Radius.circular(12)),
+//           child:  Padding(padding:EdgeInsetsGeometry.all(12),
+//           child: Text("Hello ,world", style: TextStyle(fontSize: 20,color: Colors.white),),),
+          
+//          ),
+//       ),
+//     );
+//   }
+// }
+
+
+
+// dave exercise 1
+
+
+void main(){
+  runApp(MaterialApp(
+    home:Exercise(),
+  ));
 }
 
 
-class Dashboard extends StatelessWidget {
+
+// // number 7 lice button text
+
+// class Exercise extends StatelessWidget {
+//   const Exercise({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//         child: Row(
+//            mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             Icon(Icons.thumb_up ,color: Colors.blue,),
+//             Text('Like',style: TextStyle(color: Colors.blue),),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+
+
+// number 8 card
+
+// class Exercise extends StatelessWidget {
+//   const Exercise({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//        child: Card(
+//         color: Colors.grey[500],
+//         child: Padding(padding:EdgeInsetsGeometry.all(12),
+//         child: Column(
+//         mainAxisSize: MainAxisSize.min,
+//         children: [
+//           Text('Hello nolstan',style: TextStyle(fontSize: 24),),
+//           Text('hope you good')
+//         ],
+//        ),
+//         )
+//        )
+//       ),
+//     );
+//   }
+// }
+
+
+// Number 9
+
+
+// class Exercise extends StatelessWidget {
+//   const Exercise({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//        child: Card(
+//         color: Colors.grey[500],
+//         child: Row(
+//           mainAxisSize: MainAxisSize.min,
+          
+//           children: [
+//             CircleAvatar(radius: 25,),
+//             const SizedBox(width: 12),
+//             Column(
+//               mainAxisSize: MainAxisSize.min,
+ //              crossAxisAlignment: CrossAxisAlignment.start, //aligns the txt to the left
+//               children: [
+//                 Text('Nolstan Logic',style: TextStyle(fontSize: 24),),
+//                 Text('Flutter dev')
+//               ],
+//             )
+//           ],
+//         ),
+//        )
+//       ),
+//     );
+//   }
+// }
+// By default, Column uses MainAxisSize.max, so it tries to occupy the available height. This is very important 
+
+
+
+
+// number 10 
+// class Exercise extends StatelessWidget {
+//   const Exercise({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//        child: Card(
+//         child: Row(
+
+//           mainAxisSize: MainAxisSize.min,
+//           children: [
+//             Column(
+//               mainAxisSize: MainAxisSize.min,
+//               children: [
+//                 Icon(Icons.favorite),
+//                 SizedBox(width: 20,),
+//                 Icon(Icons.favorite),
+//               ],
+//             ),
+//             Column(
+//               mainAxisSize: MainAxisSize.min,
+//               children: [
+//                 Icon(Icons.favorite),
+//                 SizedBox(width: 20,),
+//                 Icon(Icons.favorite),
+//               ],
+//             )
+
+//           ],
+//         ),
+//        ),
+//       ),
+//     );
+//   }
+// }
+
+
+
+
+// number 11
+// class Exercise extends StatelessWidget {
+//   const Exercise({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center (
+//         child: Container(
+//                width: 100,
+//                height: 30,
+//              decoration: BoxDecoration(color: Colors.white,borderRadius:BorderRadius.circular(2)),
+             
+//               child: Text("Mountain",style: TextStyle(fontSize: 4),),
+//       ),)
+//     );
+//   }
+// }
+
+// class Exercise extends StatelessWidget {
+//   const Exercise({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//         child: Card(
+//           color: Colors.grey[300],
+//           child: Row(
+//             // mainAxisAlignment: MainAxisAlignment.center,
+//             mainAxisSize: MainAxisSize.min,
+//             children: [
+//               Icon(Icons.location_city),
+//               Column(
+//                 // mainAxisAlignment: MainAxisAlignment.center,
+//                 mainAxisSize: MainAxisSize.min,
+//                 crossAxisAlignment: CrossAxisAlignment.start,
+//                 children: [
+//                 Text("Mulanje mountain"),
+//                 Text('Highest peac malawi ,Popular for hicing')
+//               ],)
+//             ],
+//           ),
+//         ),
+//       )
+//     );
+//   }
+// }
+
+
+
+
+// class Exercise extends StatelessWidget {
+//   const Exercise({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//         child: Row(
+//           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        
+//           children: [
+           
+//             Container(
+//               padding: EdgeInsets.all(12),
+//               color: Colors.blue,
+//               height: 100,
+//               width: 100,
+//             ),
+//             Container(
+//               padding: EdgeInsets.all(12),
+//               color: const Color.fromARGB(255, 243, 187, 33),
+//               height: 12,
+//               width: 12,
+//             ),
+//             Container(
+//                             padding: EdgeInsets.all(12),
+//               color: const Color.fromARGB(255, 13, 13, 14),
+//               height: 12,
+//               width: 12,
+//             ),
+//           ],
+//         ),
+//       )
+//     );
+//   }
+// }
+
+
+
+
+// class Exercise extends StatelessWidget {
+//   const Exercise({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//         child: Row(
+//           mainAxisAlignment: MainAxisAlignment.spaceAround,
+        
+//           children: [
+           
+//            SizedBox(width: 12,),
+//             Expanded(
+//               flex: 2,
+//               child:Container(
+//               padding: EdgeInsets.all(12),
+//               color: Colors.blue,
+//               height: 100,
+//               width: 100,
+//             )),
+//             SizedBox(width: 12,),
+//             Expanded(
+//               flex: 4,
+//               child:Container(
+//               padding: EdgeInsets.all(12),
+//               color: const Color.fromARGB(255, 196, 210, 221),
+//               height: 100,
+//               width: 100,
+//             )),
+//             SizedBox(width: 12,),
+//             Expanded(
+//               flex: 2,
+//               child:Container(
+//               padding: EdgeInsets.all(12),
+//               color: Colors.blue,
+//               height: 100,
+//               width: 100,
+//             )
+//             ),
+//             SizedBox(width: 12,),
+//           ],
+//         ),
+//       )
+//     );
+//   }
+// }
+
+
+
+
+// class Exercise extends StatelessWidget {
+//   const Exercise({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//         child: Stack(
+//           children: [
+//             CircleAvatar(
+//               radius: 60,
+//               backgroundColor: Colors.blue,
+//             ),
+//             Positioned(top: 0, right: 0,child: Container(
+//               padding: EdgeInsets.all(10),
+//              decoration: BoxDecoration(color: Colors.redAccent, shape: BoxShape.circle),
+//              child: Text('3',style: TextStyle(color: Colors.white),),
+//             ),),
+          
+//           ],
+//         ),
+
+//       )
+//     );
+//   }
+// }
+
+
+
+
+
+// class Exercise extends StatelessWidget {
+//   const Exercise({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//         child: Column(
+//          mainAxisSize: MainAxisSize.min,
+//           children: [
+//             CircleAvatar(radius: 60, backgroundColor: Colors.blue,),
+//             Text('Tamara Mumba'),
+//             Row(
+//               mainAxisAlignment: MainAxisAlignment.center,
+         
+//               children: [
+//                 Column(children: [Text("120"),Text("posts")],),
+//                 SizedBox(width: 12,),
+//                 Column(children: [Text("4.2k"),Text("followers")],),
+//                  SizedBox(width: 12,),
+//                 Column(children: [Text("180"),Text("following")],),
+//               ],
+//             ),
+//             ElevatedButton(onPressed: (){}, child: Text('follow'))
+//           ],
+//         ),
+//       )
+//     );
+//   }
+// }
+
+
+// class Exercise extends StatefulWidget {
+//   const Exercise({super.key});
+
+//   @override
+//   State<Exercise> createState() => _ExerciseState();
+// }
+// int counter = 0;
+// class _ExerciseState extends State<Exercise> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//         child: Row(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             TextButton(onPressed: (){ 
+//               setState(() {
+//                 counter--;
+//               });
+//             }, child: Text('-',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.grey[700]),)),
+//             Text("$counter"),
+//             TextButton(onPressed: (){
+//                setState(() {
+//                 counter++;
+//               });
+//             }, child: Text('+',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.blue),))
+//           ],
+//         )
+//       ),
+//     );
+//   }
+// }
+
+
+
+
+
+class Exercise extends StatefulWidget {
+  const Exercise({super.key});
+
+  @override
+  State<Exercise> createState() => _ExerciseState();
+}
+int counter = 0;
+class _ExerciseState extends State<Exercise> {
   @override
   Widget build(BuildContext context) {
-   return MaterialApp(
-    home: Scaffold(
-         appBar: AppBar(
-          backgroundColor: Colors.grey,
-          title: Text("Title Holder",style: TextStyle(color: Colors.white),),
-          centerTitle: true,
-         ),
-          body: Center(
-            child: Column(
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          // crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Row(
               children: [
-                MyText(text: "Hello 1"),
-                MyText(text: "Hello 2"),
-                MyText(text: "Hello 3")
+                Padding(padding: EdgeInsetsGeometry.all(100), child: Card(
+              child: Column(
+                children: [Column(
+                  children: [Icon(Icons.home),
+                  Text("Home")],
+                )],
+              ),
+            ),),
+            Padding(padding: EdgeInsetsGeometry.all(12), child: Card(
+              child: Column(
+                children: [Column(children: [Icon(Icons.settings),Text('settings')],)],
+              ),
+            ),),
               ],
             ),
-          ),
-          ),
-   );
-  }
-}
-
-
-
-class MyText extends StatelessWidget {
-  String text ;
-  MyText ({super.key, required this.text});
-  @override
-  Widget build(BuildContext context) {
-    return Text(text,style: TextStyle(color: Colors.red),);
-    
-  }
-}
-
-
-
-class BlacButton extends StatelessWidget {
-  final String text;
-
-  const BlacButton({super.key, required this.text});
-
-  @override
-  Widget build(BuildContext context) {
-    return OutlinedButton(
-      onPressed: () {
-        
-      },
-      child: Text(text),
+            Row(children: [
+                          Padding(padding: EdgeInsetsGeometry.all(100), child: Card(
+              child: Column(
+                children: [Column(children: [Icon(Icons.favorite),Text("Liced")],)],
+              ),
+            ),),
+            Padding(padding: EdgeInsetsGeometry.all(12), child: Card(
+              child: Column(
+                children: [Icon(Icons.home)],
+              ),
+            ),),
+            ],)
+          ],
+        ),
+      ),
     );
   }
 }
 
 
 
-class MyButton extends StatefulWidget {
-  const MyButton({super.key});
 
-  @override
-  State<MyButton> createState() => _MyButtonState();
-}
 
-class _MyButtonState extends State<MyButton> {
-  @override
-  Widget build(BuildContext context) {
-    return const OutlinedButton(onPressed: (){
-      print("You pressed me ");
-    }, child: Text("Pressed"));
-  }
-}
+
