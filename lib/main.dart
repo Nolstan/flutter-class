@@ -865,11 +865,11 @@ import 'package:flutter_practice/myText.dart';
 // dave exercise 1
 
 
-void main(){
-  runApp(MaterialApp(
-    home:Exercise(),
-  ));
-}
+// void main(){
+//   runApp(MaterialApp(
+//     home:Exercise(),
+//   ));
+// }
 
 
 
@@ -1243,62 +1243,700 @@ void main(){
 
 
 
+// FORM WIDGETS
+// import 'pages/homepage.dart';
+// void main(){
+//   runApp(MaterialApp(
+//     home:InputFields(),
+//   ));
+// }
 
 
-class Exercise extends StatefulWidget {
-  const Exercise({super.key});
+// class InputFields extends StatefulWidget {
+//   const InputFields({super.key});
+
+//   @override
+//   State<InputFields> createState() => _InputFieldsState();
+// }
+
+// class _InputFieldsState extends State<InputFields> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("data"),
+//         centerTitle: true,
+//       ),
+
+//       body: Column(
+//         children: [
+//           TextField(
+//             decoration: InputDecoration(
+//               hintText: "Enter your name ",
+//               labelText: "Name",
+//               labelStyle: TextStyle(
+//                 color: Colors.grey[600],
+//                 fontSize: 24,
+//               ),
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+
+// CHANGING CEYBOARD LAYOUT
+
+
+// class InputFields extends StatefulWidget {
+//   const InputFields({super.key});
+
+//   @override
+//   State<InputFields> createState() => _InputFieldsState();
+// }
+
+// class _InputFieldsState extends State<InputFields> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("data"),
+//         centerTitle: true,
+//       ),
+
+//       body: Column(
+//         children: [
+//           TextField(
+//             decoration: InputDecoration(
+//               hintText: "Enter your name ",
+//               labelText: "Name",
+//               labelStyle: TextStyle(
+//                 color: Colors.grey[600],
+//                 fontSize: 24,
+//               ),
+//             ),
+//             keyboardType: TextInputType.numberWithOptions(),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+
+// For passwords fields and limiting characters to type in a field
+
+
+// class InputFields extends StatefulWidget {
+//   const InputFields({super.key});
+
+//   @override
+//   State<InputFields> createState() => _InputFieldsState();
+// }
+
+// class _InputFieldsState extends State<InputFields> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("data"),
+//         centerTitle: true,
+//       ),
+
+//       body: Padding(
+//         padding: EdgeInsetsGeometry.all(8),
+//        child: Column(
+//         children: [
+//           TextField(
+//             decoration: InputDecoration(
+//               hintText: "Enter your name ",
+//               labelText: "Name",
+//               labelStyle: TextStyle(
+//                 color: Colors.grey[600],
+//                 fontSize: 18,
+//               ),
+//               border: OutlineInputBorder(),  //inputborder.none removes border even at bottom ,
+//               fillColor: Colors.grey[400], //setting the bacground color of the input
+//               filled: true,
+//             ),
+//             // keyboardType: TextInputType.numberWithOptions(),
+//             obscureText: true, //for passwords 
+//             maxLength: 10, //limiting  
+//             // maxLines: 3,
+//           ),
+          
+//         ],
+//       ),),
+//     );
+//   }
+// }
+
+
+//MULTIPLE FIELDS
+
+// class InputFields extends StatefulWidget {
+//   const InputFields({super.key});
+
+//   @override
+//   State<InputFields> createState() => _InputFieldsState();
+// }
+
+// class _InputFieldsState extends State<InputFields> {
+//   bool _secureText = true;
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("data"),
+//         centerTitle: true,
+//       ),
+
+//       body: Padding(
+//         padding: EdgeInsetsGeometry.all(8),
+//        child: Column(
+//         children: [
+//           TextField(
+//             decoration: InputDecoration(
+//               hintText: "Enter your name ",
+//               labelText: "Name",
+//               labelStyle: TextStyle(
+//                 color: Colors.grey[600],
+//                 fontSize: 18,
+//               ),
+//               border: OutlineInputBorder(),  //inputborder.none removes border even at bottom ,
+//               fillColor: Colors.grey[400], //setting the bacground color of the input
+//               filled: true,
+//             ),
+//             // keyboardType: TextInputType.numberWithOptions(),
+//             obscureText: true, //for passwords 
+//             maxLength: 10, //limiting  
+//             // maxLines: 3,
+//           ),
+//           TextField(
+//             decoration: InputDecoration(
+//               hintText: "Type your description ",
+//               labelText: "Description",
+//               labelStyle: TextStyle(
+//                 color: Colors.grey[600],
+//                 fontSize: 18,
+//               ),
+//               border: OutlineInputBorder(),  //inputborder.none removes border even at bottom ,
+//               fillColor: Colors.grey[400], //setting the bacground color of the input
+//               filled: true,
+//             ),
+//             // keyboardType: TextInputType.numberWithOptions(),
+//             obscureText: false, //for passwords 
+//             // maxLength: 10, //limiting  
+//             maxLines: 3,
+//           ),
+//           SizedBox(height: 16,),
+//           TextField(
+//             decoration: InputDecoration(
+//               hintText: "Enter your Password ",
+//               labelText: "Password",
+//               labelStyle: TextStyle(
+//                 color: Colors.grey[600],
+//                 fontSize: 18,
+//               ),
+//               border: OutlineInputBorder(),  //inputborder.none removes border even at bottom ,
+//               fillColor: Colors.grey[400], //setting the bacground color of the input
+//               filled: true,
+//               suffixIcon: IconButton(
+//                 // icon: _secureText? Icons.remove_red_eye: Icons.security,
+//                 onPressed: (){
+                
+//                 setState(() {
+//                 _secureText =! _secureText;
+//                 });
+//               }, icon: Icon(Icons.security)), // prefixIcon brings the icon to the start of input ,icon places the icon outside and suffixIcon at the end of input
+//             ),
+//             // keyboardType: TextInputType.numberWithOptions(),
+//             obscureText: _secureText, //for passwords 
+//             // maxLength: 10, //limiting  
+//             // maxLines: 3,
+//           ),
+//         ],
+//       ),),
+//     );
+//   }
+// }
+
+
+// getting the value from the text field : VERY IMPORTANT
+
+// class InputFields extends StatefulWidget {
+//   const InputFields({super.key});
+
+//   @override
+//   State<InputFields> createState() => _InputFieldsState();
+// }
+
+// class _InputFieldsState extends State<InputFields> {
+//   bool _secureText = true;
+//   TextEditingController _nameController =  TextEditingController();// to get the  typed value in text field this is the first step, text controller obj
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("data"),
+//         centerTitle: true,
+//       ),
+
+//       body: Padding(
+//         padding: EdgeInsetsGeometry.all(8),
+//        child: Column(
+//         children: [
+//           TextField(
+//             controller: _nameController, //step 2 pass it to the named text field
+//             decoration: InputDecoration(
+//               hintText: "Enter your name ",
+//               labelText: "Name",
+//               labelStyle: TextStyle(
+//                 color: Colors.grey[600],
+//                 fontSize: 18,
+//               ),
+//               border: OutlineInputBorder(),  //inputborder.none removes border even at bottom ,
+//               fillColor: Colors.grey[400], //setting the bacground color of the input
+//               filled: true,
+//             ),
+//             // keyboardType: TextInputType.numberWithOptions(),
+//             obscureText: false, //for passwords 
+//             // maxLength: 10, //limiting  
+//             // maxLines: 3,
+//           ),
+//           TextField(
+//             decoration: InputDecoration(
+//               hintText: "Type your description ",
+//               labelText: "Description",
+//               labelStyle: TextStyle(
+//                 color: Colors.grey[600],
+//                 fontSize: 18,
+//               ),
+//               border: OutlineInputBorder(),  //inputborder.none removes border even at bottom ,
+//               fillColor: Colors.grey[400], //setting the bacground color of the input
+//               filled: true,
+//             ),
+//             // keyboardType: TextInputType.numberWithOptions(),
+//             obscureText: false, //for passwords 
+//             // maxLength: 10, //limiting  
+//             maxLines: 3,
+//           ),
+//           SizedBox(height: 16,),
+//           TextField(
+//             decoration: InputDecoration(
+//               hintText: "Enter your Password ",
+//               labelText: "Password",
+//               labelStyle: TextStyle(
+//                 color: Colors.grey[600],
+//                 fontSize: 18,
+//               ),
+//               errorText: "required",
+//               border: OutlineInputBorder(),  //inputborder.none removes border even at bottom ,
+//               fillColor: Colors.grey[400], //setting the bacground color of the input
+//               filled: true,
+//               suffixIcon: IconButton(
+//                 // icon: _secureText? Icons.remove_red_eye: Icons.security,
+//                 onPressed: (){
+                
+//                 setState(() {
+//                 _secureText =! _secureText;
+//                 });
+//               }, icon: Icon(Icons.security)), // prefixIcon brings the icon to the start of input ,icon places the icon outside and suffixIcon at the end of input
+//             ),
+//             // keyboardType: TextInputType.numberWithOptions(),
+//             obscureText: _secureText, //for passwords 
+//             // maxLength: 10, //limiting  
+//             // maxLines: 3,
+//           ),
+
+//           TextFormField(
+
+//           ),
+//           //step 3 triggering the read
+//           ElevatedButton(onPressed: (){
+//             print("Name ${_nameController.text}");
+//           }, child: Text("data"))
+//         ],
+//       ),),
+//     );
+//   }
+// }
+
+// SUMMARY
+// 1. declare controller obj TextEditingController _nameController =  TextEditingController();
+// 2. pass it to the named field controller: _nameController,
+// 3. trigger the read  print("Name ${_nameController.text}");
+
+
+
+
+
+// TEXTFORMFIELD
+
+// Its a formfield that provides extra features lice validation
+
+// class InputFields extends StatefulWidget {
+//   const InputFields({super.key});
+
+//   @override
+//   State<InputFields> createState() => _InputFieldsState();
+// }
+
+// class _InputFieldsState extends State<InputFields> {
+//   bool _secureText = true;
+//   TextEditingController _nameController =  TextEditingController();// to get the  typed value in text field this is the first step, text controller obj
+//   // The key used in validating the form
+//   var _formkey = GlobalKey();
+//   String  _passwordError = '';
+//   TextEditingController _passwordController =  TextEditingController();
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("data"),
+//         centerTitle: true,
+//       ),
+
+//       body: Padding(
+//         padding: EdgeInsetsGeometry.all(8),
+//        child: Column(
+//         children: [
+//           TextField(
+//             controller: _nameController, //step 2 pass it to the named text field
+//             decoration: InputDecoration(
+//               hintText: "Enter your name ",
+//               labelText: "Name",
+//               labelStyle: TextStyle(
+//                 color: Colors.grey[600],
+//                 fontSize: 18,
+//               ),
+//               border: OutlineInputBorder(),  //inputborder.none removes border even at bottom ,
+//               fillColor: Colors.grey[400], //setting the bacground color of the input
+//               filled: true,
+//             ),
+//             // keyboardType: TextInputType.numberWithOptions(),
+//             obscureText: false, //for passwords 
+//             // maxLength: 10, //limiting  
+//             // maxLines: 3,
+//           ),
+//           TextField(
+//             decoration: InputDecoration(
+//               hintText: "Type your description ",
+//               labelText: "Description",
+//               labelStyle: TextStyle(
+//                 color: Colors.grey[600],
+//                 fontSize: 18,
+//               ),
+//               border: OutlineInputBorder(),  //inputborder.none removes border even at bottom ,
+//               fillColor: Colors.grey[400], //setting the bacground color of the input
+//               filled: true,
+//             ),
+//             // keyboardType: TextInputType.numberWithOptions(),
+//             obscureText: false, //for passwords 
+//             // maxLength: 10, //limiting  
+//             maxLines: 3,
+//           ),
+//           SizedBox(height: 16,),
+//           TextField(
+//             controller: _passwordController,
+//             decoration: InputDecoration(
+              
+//               hintText: "Enter your Password ",
+//               labelText: "Password",
+//               labelStyle: TextStyle(
+//                 color: Colors.grey[600],
+//                 fontSize: 18,
+//               ),
+//               errorText: _passwordError,
+//               border: OutlineInputBorder(),  //inputborder.none removes border even at bottom ,
+//               fillColor: Colors.grey[400], //setting the bacground color of the input
+//               filled: true,
+//               suffixIcon: IconButton(
+//                 // icon: _secureText? Icons.remove_red_eye: Icons.security,
+//                 onPressed: (){
+                
+//                 setState(() {
+//                 _secureText =! _secureText;
+//                 });
+//               }, icon: Icon(Icons.security)), // prefixIcon brings the icon to the start of input ,icon places the icon outside and suffixIcon at the end of input
+//             ),
+//             // keyboardType: TextInputType.numberWithOptions(),
+//             obscureText: _secureText, //for passwords 
+//             // maxLength: 10, //limiting  
+//             // maxLines: 3,
+//           ),
+
+//           Form(
+
+//             child: TextFormField(
+//               key: _formkey,
+//               decoration: InputDecoration(
+//                 hintText: "Enter password",
+//                 labelText: "Password",
+//                 labelStyle: TextStyle(
+//                 color: Colors.grey[600],
+//                 fontSize: 18,
+//               ),
+//               errorText: _passwordError,
+//               border: OutlineInputBorder(),
+//               ),
+              
+
+//           ),),
+//           //step 3 triggering the read
+//           ElevatedButton(onPressed: (){
+//                setState(() {
+//               if(_passwordController.text.length<5){
+//               _passwordError =  "Password > 5 chars";
+//             }
+//             _passwordError = "";
+//                });
+//           }, child: Text("data"))
+//         ],
+//       ),),
+//     );
+//   }
+// }
+
+// SUMMARY
+// 1. create a key in textformfield key: _formkey,
+// 2. create the  key object used for validation and usually macing it global is better choice var _formkey = GlobalKey();
+
+
+// void main(){
+//   runApp(MaterialApp(
+//     home:MydropdownMenu(),
+//   ));
+// }
+
+
+// // THE DROPDOWN MENU
+
+// class MydropdownMenu extends StatefulWidget {
+//   const MydropdownMenu({super.key});
+
+
+
+//   @override
+//   State<MydropdownMenu> createState() => _MydropdownMenuState();
+// }
+
+// class _MydropdownMenuState extends State<MydropdownMenu> {
+//   final items = ["item 1","item 2","item 3","item 4","item 5","item 6","item 7"];
+//   String? value;
+//       DropdownMenuItem<String> buildMenuItem(String item) => DropdownMenuItem(
+//       value: item,
+//       child: Text(item, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+//     );
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//         child: Container(
+//           width: 300,
+//           decoration: BoxDecoration(
+//             border: Border.all(color: Colors.black, width: 4),
+//             borderRadius: BorderRadius.circular(20)
+//           ),
+//           child:DropdownButtonHideUnderline(
+//             child:DropdownButton<String>(
+//             value: value,
+//             isExpanded: true,
+//          items: items.map(buildMenuItem).toList(), onChanged: (value){
+//          setState(() {
+//             this.value = value ;
+//          });
+//         }),
+//         ),
+//         )
+//       ),
+//     );
+
+
+
+//   }
+// }
+
+
+
+// CheckboxesRadio Buttons
+
+// void main(){
+//   runApp(MaterialApp(
+//     home:CheckboxesRadio(),
+//   ));
+// }
+
+
+// class CheckboxesRadio extends StatefulWidget {
+//   const CheckboxesRadio({super.key});
+
+//   @override
+//   State<CheckboxesRadio> createState() => _CheckboxesRadioState();
+// }
+
+// class _CheckboxesRadioState extends State<CheckboxesRadio> {
+//   String selectedItem = "none";
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             SizedBox(height: 30,),
+//             Text("selected: $selectedItem"),
+//               SizedBox(height: 20,),
+//             SizedBox (
+//           width: 200,
+//           child: RadioMenuButton(
+//         value: 'Mango', 
+//         groupValue: selectedItem, 
+//         onChanged:(selectedValue){
+//              setState(() {
+//                 selectedItem = selectedValue!;
+//              });
+//         }, 
+//         style: ButtonStyle(
+//          shape: MaterialStatePropertyAll(
+//           RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
+//         elevation: MaterialStatePropertyAll(2),
+//         backgroundColor: MaterialStatePropertyAll(Colors.white),
+//          ),
+//          child: Text("mango"),
+//         ),
+//         ),
+//                       SizedBox(height: 20,),
+//             SizedBox (
+//           width: 200,
+//           child: RadioMenuButton(
+//         value: 'Coconut', 
+//         groupValue: selectedItem, 
+//         onChanged:(selectedValue){
+//              setState(() {
+//                selectedItem = selectedValue!;
+//              });
+//         }, 
+//         style: ButtonStyle(
+//          shape: MaterialStatePropertyAll(
+//           RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
+//         elevation: MaterialStatePropertyAll(2),
+//         backgroundColor: MaterialStatePropertyAll(Colors.white),
+//          ),
+//          child: Text("mango"),
+//         ),
+//         ),
+
+//                       SizedBox(height: 20,),
+//             SizedBox (
+//           width: 200,
+//           child: RadioMenuButton(
+//         value: 'Orange', 
+//         groupValue: selectedItem, 
+//         onChanged:(selectedValue){
+//              setState(() {
+//                 selectedItem = selectedValue!;
+//              });
+//         }, 
+//         style: ButtonStyle(
+//          shape: MaterialStatePropertyAll(
+//           RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
+//         elevation: MaterialStatePropertyAll(2),
+//         backgroundColor: MaterialStatePropertyAll(Colors.white),
+//          ),
+//          child: Text("Orange"),
+//         ),
+//         ),
+//           ],
+//         )
+//         ));
+  
+//   }
+// }
+
+
+
+// // SWITCHES
+// void main(){
+//   runApp(MaterialApp(
+//     home:Switches ()),
+//   );
+// }
+
+
+// class Switches extends StatefulWidget {
+//   const Switches({super.key});
+
+//   @override
+//   State<Switches> createState() => _SwitchesState();
+// }
+
+// class _SwitchesState extends State<Switches> {
+//   bool isSwitched = false;
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       backgroundColor: Colors.red[100],
+//       body: Column(
+//         mainAxisAlignment: MainAxisAlignment.center,
+//         children: [
+//           Text("The switch is : ${isSwitched?"ON":"OFF"}", style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.white),),
+//           Center(
+//             child: Switch(value: isSwitched, onChanged: (value){
+//               setState(() {
+//                 isSwitched = value;
+//               });
+//             },
+//             activeColor: Colors.red,
+//             inactiveThumbColor: Colors.blue,
+//             ),
+//           )
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+
+
+
+// DATE PICER
+
+void main(){
+  runApp(MaterialApp(
+    home:DatePicer()),
+  );
+}
+
+
+class DatePicer extends StatefulWidget {
+  const DatePicer({super.key});
 
   @override
-  State<Exercise> createState() => _ExerciseState();
+  State<DatePicer> createState() => _DatePicerState();
 }
-int counter = 0;
-class _ExerciseState extends State<Exercise> {
+
+class _DatePicerState extends State<DatePicer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          // crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Row(
-              children: [
-                Padding(padding: EdgeInsetsGeometry.all(100), child: Card(
-              child: Column(
-                children: [Column(
-                  children: [Icon(Icons.home),
-                  Text("Home")],
-                )],
-              ),
-            ),),
-            Padding(padding: EdgeInsetsGeometry.all(12), child: Card(
-              child: Column(
-                children: [Column(children: [Icon(Icons.settings),Text('settings')],)],
-              ),
-            ),),
-              ],
-            ),
-            Row(children: [
-                          Padding(padding: EdgeInsetsGeometry.all(100), child: Card(
-              child: Column(
-                children: [Column(children: [Icon(Icons.favorite),Text("Liced")],)],
-              ),
-            ),),
-            Padding(padding: EdgeInsetsGeometry.all(12), child: Card(
-              child: Column(
-                children: [Icon(Icons.home)],
-              ),
-            ),),
-            ],)
-          ],
-        ),
+        child: Padding(padding: EdgeInsetsGeometry.all(30),
+        child: TextField(
+          decoration: InputDecoration(
+            labelText: "DATE",
+            filled: true,
+            prefixIcon: Icon(Icons.calendar_month),
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide.none,
+            )
+          ),
+
+          readOnly: true,
+        ),),
       ),
     );
   }
 }
-
-
-
-
-
-
