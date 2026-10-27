@@ -20,10 +20,56 @@ class Messenger extends StatelessWidget {
            
               Expanded(
                 child: TabBarView(children: [
-                          Container(
+                    Column(
+                      children: [
+                        SizedBox(height: 16,),
+                            Row(
+                              children: [
+                                GestureDetector(
+                                  onTap: (){
+                                    print('Amara Phiri');
+                                  },
+                                  child:CircleAvatar()
+                                  ),
+                                 SizedBox(width: 8,),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("Amara Phiri",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                                    Text("See you at 10!"),
+                                  ],
+                                ),              
+                              ],
+                            ),
+                          SizedBox(height: 16,),
+                          Row(
+                              children: [
+                                GestureDetector(
+                                  onTap: (){
+                                    print('Amara Phiri');
+                                  },
+                                  child:CircleAvatar()
+                                  ),
+                                 SizedBox(width: 8,),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                      Text("Amara Phiri",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                                    Text("See you at 10!"),
+                                  ],
+                                ),              
+                              ],
+                            ),
+                      
                             
-                          ),
-                          Container(),
+                      ],
+                    ),
+                            
+
+
+                            Center(
+                              child: Text("No calls yet"),
+                            )
               ]),
               ),
             ],
