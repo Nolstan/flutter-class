@@ -41,8 +41,7 @@ class TopicHome extends StatelessWidget {
 
           return Padding(
             padding: const EdgeInsets.only(bottom: 12),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
+dd              style: ElevatedButton.styleFrom(
                 minimumSize: const Size.fromHeight(52),
               ),
               onPressed: () {
