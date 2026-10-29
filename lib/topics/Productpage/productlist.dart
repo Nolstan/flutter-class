@@ -238,6 +238,7 @@ class _ProductlistState extends State<Productlist> {
                 Icon(Icons.shop_2_outlined),
                 Text("Shop")
               ],
+              
             ),
             ),
                         Expanded(child: Column(

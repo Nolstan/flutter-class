@@ -41,3 +41,15 @@ class TabaBarWdgt extends StatelessWidget {
     ));
   }
 }
+
+
+// 1. Create DefaultTabController and set the number of tabs.
+// DefaultTabController(length: 3, child: Scaffold())
+
+// 2. Create the tabs using TabBar(tabs: [Tab(), Tab(), Tab()]).
+
+// 3. Use TabBarView(children: []) to add content for each tab.
+
+// 4. Wrap TabBarView with Expanded if it is inside a Column.
+
+// 5. Ensure length, number of Tabs, and TabBarView children match.

@@ -56,3 +56,14 @@ class _DropdownAndSwitchesDemoState extends State<DropdownAndSwitchesDemo> {
     );
   }
 }
+// DROPDOWN
+// 1. Create a list of items and a variable to store the selected item.
+// 2. Use DropdownButton with value, hint, and items.
+// 3. Use DropdownMenuItem to display each item.
+// 4. Use onChanged and setState to update the selected item.
+
+// SWITCH
+// 1. Create a bool variable and set it to false.
+// 2. Use Switch(value: _isSwitched, onChanged: ...).
+// 3. Use setState to update the boolean when the switch changes.
+// 4. Use a ternary operator to display ON or OFF.
